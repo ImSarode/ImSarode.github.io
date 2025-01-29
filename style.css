@@ -407,7 +407,9 @@ a{
     .flex-contact-icons > p {
         font-size: 1.25rem;
     }
-    
+    .icon-social-contact {
+        display: none;
+    }
 }
 
 @media (max-width: 425px) {
