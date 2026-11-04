@@ -80,15 +80,21 @@ const empty = document.getElementById("noProjects");
 function filterProjects(category) {
   let count = 0;
 
+  
   cards.forEach((card) => {
     const matches =
       category === "All" ||
       card.dataset.category === category;
-
+  
+    // Remove any inline display override
+    card.style.removeProperty("display");
+  
+    // Let the existing CSS manage grid/flex layouts
     card.hidden = !matches;
-
+  
     if (matches) count++;
   });
+
 
   // Update active filter button
   filters.forEach((button) => {
